@@ -11,7 +11,7 @@ public class DataBase {
 
 	public static Logger LOG = LoggerFactory.getLogger(DataBase.class);
 
-	public static Connection cn;
+	private static Connection cn;
 
 	static {
 
