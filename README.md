@@ -1,4 +1,4 @@
 jackrabbit-webapp-impl
 ======================
 
-jackrabbit web application implenetation
+jackrabbit web application implemetation
