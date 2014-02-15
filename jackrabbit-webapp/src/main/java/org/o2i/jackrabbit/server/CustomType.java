@@ -2,16 +2,34 @@ package org.o2i.jackrabbit.server;
 
 public enum CustomType {
 
-	// Node Type
+	/**
+	 * Nodes
+	 */
 
-	NODE_O2I("o2i"),
-
+	NODE_AIFLOW("AiFlow"),
+	NODE_USER("User"),
+	NODE_STATUS("Status"),
+	NODE_TYPE("Type"),
+	NODE_METADATA("Metadata"),
+	NODE_USER_LIST("UserList"),
+	NODE_TYPE_LIST("TypeList"),
+	NODE_STATUS_LIST("StatusList"),
+	NODE_METADATA_LIST("MetadataList"),
 	
+	/**
+	 * PROPERTY
+	 */
 	
+	PROP_LABEL("label"),
+	PROP_MEMBRE("membre"),
+	PROP_REF_METADATA("refMetadata"),
+	PROP_STATUS("status"),
+	PROP_USER("user"),
+	PROP_TYPE("type"),
+	PROP_METADATA("metadata"),
+	PROP_META_NAME("metaName"),
+	PROP_META_VALUE("metaValue");
 	
-	// Prrperty
-	NODE_USER("user");
-
 	/** namesapce */
 	private final String NS = "o2:";
 

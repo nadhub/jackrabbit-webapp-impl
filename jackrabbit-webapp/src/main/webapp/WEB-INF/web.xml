@@ -43,7 +43,7 @@
         <init-param>
             <param-name>bootstrap-config</param-name>
 <!--             <param-value>jackrabbit/bootstrap.properties</param-value>  -->   
-            <param-value>/~/JAVA_JCR/bootstrap.properties</param-value>
+            <param-value>/home/nadir/JAVA_JCR/bootstrap.properties</param-value>
             
             <description>
                 Property file that hold the same initialization properties than
@@ -136,7 +136,7 @@
         <init-param>
             <param-name>bootstrap-config</param-name>
             <!-- <param-value>jackrabbit/bootstrap.properties</param-value> -->
-            <param-value>/~/JAVA_JCR/bootstrap.properties</param-value>
+            <param-value>/home/nadir/JAVA_JCR/bootstrap.properties</param-value>
             <description>
                 Property file that hold the same initialization properties than
                 the init-params below. If a parameter is specified in both

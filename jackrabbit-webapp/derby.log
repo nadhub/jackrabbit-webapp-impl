@@ -1,0 +1,18 @@
+----------------------------------------------------------------
+2014-02-15 13:13:38.305 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance a816c00e-0144-35ae-47ef-0000057364e8
+on database directory /home/nadir/work/repo/jack/version/db  
+
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+2014-02-15 13:13:39.240 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance 888c4022-0144-35ae-47ef-0000057364e8
+on database directory /home/nadir/work/repo/jack/workspaces/default/db  
+
+Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+2014-02-15 13:13:40.612 GMT:
+ Booting Derby version The Apache Software Foundation - Apache Derby - 10.5.3.0 - (802917): instance 6965c036-0144-35ae-47ef-0000057364e8
+on database directory /home/nadir/work/repo/jack/workspaces/security/db  
+
+Database Class Loader started - derby.database.classpath=''
