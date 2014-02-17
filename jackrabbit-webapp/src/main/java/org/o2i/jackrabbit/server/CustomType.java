@@ -6,13 +6,12 @@ public enum CustomType {
 	 * Nodes
 	 */
 
-	NODE_AIFLOW("AiFlow"),
+	NODE_FOLDER("Folder"),
+	NODE_FILE("File"),
 	NODE_USER("User"),
 	NODE_STATUS("Status"),
-	NODE_TYPE("Type"),
 	NODE_METADATA("Metadata"),
 	NODE_USER_LIST("UserList"),
-	NODE_TYPE_LIST("TypeList"),
 	NODE_STATUS_LIST("StatusList"),
 	NODE_METADATA_LIST("MetadataList"),
 	
@@ -20,15 +19,24 @@ public enum CustomType {
 	 * PROPERTY
 	 */
 	
-	PROP_LABEL("label"),
-	PROP_MEMBRE("membre"),
+	PROP_FOLDER_TYPE("typeFolder"),	
+	PROP_FOLDER_USER("user"),	
+	
+	PROP_FILE_STATUS("status"),
+	PROP_FILE_TYPE("typeFile"),
+	
+	
+	PROP_USER_FIRSTNAME("firstName"),	
+	PROP_USER_LASTNAME("lastName"),	
+	PROP_USER_IS_VALID("isValid"),	
+	PROP_USER_LOGIN("login"),	
+	
 	PROP_REF_METADATA("refMetadata"),
-	PROP_STATUS("status"),
-	PROP_USER("user"),
-	PROP_TYPE("type"),
 	PROP_METADATA("metadata"),
 	PROP_META_NAME("metaName"),
-	PROP_META_VALUE("metaValue");
+	PROP_META_VALUE("metaValue"),
+	
+	PROP_STATUS_LIST_NAME("statusName");
 	
 	/** namesapce */
 	private final String NS = "o2:";
