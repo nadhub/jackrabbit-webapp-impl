@@ -30,4 +30,5 @@ public class JcrRemotingServlet extends org.apache.jackrabbit.server.remoting.da
     protected Repository getRepository() {
         return RepositoryAccessServlet.getRepository(getServletContext());
     }
+   
 }
