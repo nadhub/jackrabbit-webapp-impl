@@ -1,26 +1,23 @@
 package org.o2i.jackrabbit.model;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
-public class Node {
+public class NodeBean {
 	
 	private Long nodeId;
 	private String label;
-	private User user;
+	private UserBean user;
 	private String lastModified;
-	private Status status;
+	private StatusBean status;
 	private Long type;
-	private List<RefMetadata> refMetadata;
+	//private List<RefMetadata> refMetadata;
 	
-	public Node() {
-		this.refMetadata = new ArrayList<RefMetadata>();
+	public NodeBean() {
+	//	this.refMetadata = new ArrayList<RefMetadata>();
 	}
 
-	public Node(String label, User user, String lastModified,
-			Status status, Long type) {
-		this.refMetadata = new ArrayList<RefMetadata>();
+	public NodeBean(String label, UserBean user, String lastModified,
+			StatusBean status, Long type) {
+	//	this.refMetadata = new ArrayList<RefMetadata>();
 		this.label = label;
 		this.user = user;
 		this.lastModified = lastModified;
@@ -44,11 +41,11 @@ public class Node {
 		this.label = label;
 	}
 
-	public User getUser() {
+	public UserBean getUser() {
 		return user;
 	}
 
-	public void setUser(User user) {
+	public void setUser(UserBean user) {
 		this.user = user;
 	}
 
@@ -60,11 +57,11 @@ public class Node {
 		this.lastModified = lastModified;
 	}
 
-	public Status getStatus() {
+	public StatusBean getStatus() {
 		return status;
 	}
 
-	public void setStatus(Status status) {
+	public void setStatus(StatusBean status) {
 		this.status = status;
 	}
 

@@ -1,15 +1,15 @@
 package org.o2i.jackrabbit.model;
 
-public class Metadata {
+public class MetadataBean {
 	
 	private Long metadataId;
 	private String metadataName;
 	private String metaValue;
 	
-	public Metadata() {
+	public MetadataBean() {
 	}
 
-	public Metadata(String metadataName, String metaValue) {
+	public MetadataBean(String metadataName, String metaValue) {
 		super();
 		this.metadataName = metadataName;
 		this.metaValue = metaValue;

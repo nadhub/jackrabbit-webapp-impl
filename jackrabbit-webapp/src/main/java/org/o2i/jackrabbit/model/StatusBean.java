@@ -1,14 +1,14 @@
 package org.o2i.jackrabbit.model;
 
-public class Status {
+public class StatusBean {
 	
 	private Long statusId;
 	private String statusName;
 	
-	public Status() {
+	public StatusBean() {
 	}
 
-	public Status(String statusName) {		
+	public StatusBean(String statusName) {		
 		this.statusName = statusName;
 	}
 

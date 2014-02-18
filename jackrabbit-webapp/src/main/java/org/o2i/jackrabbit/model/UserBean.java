@@ -1,6 +1,6 @@
 package org.o2i.jackrabbit.model;
 
-public class User {
+public class UserBean {
 	
 	private Long userId;
 	private String firstName;
@@ -9,10 +9,10 @@ public class User {
 	private String password;
 	private boolean isValid = true;
 	
-	public User() {
+	public UserBean() {
 	}
 
-	public User(String firstName, String name, String login, String password,
+	public UserBean(String firstName, String name, String login, String password,
 			boolean isValid) {
 		this.firstName = firstName;
 		this.name = name;
@@ -23,7 +23,7 @@ public class User {
 	
 	
 
-	public User(String firstName, String login, String password) {
+	public UserBean(String firstName, String login, String password) {
 		super();
 		this.firstName = firstName;
 		this.login = login;

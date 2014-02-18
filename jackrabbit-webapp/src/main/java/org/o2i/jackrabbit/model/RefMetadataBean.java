@@ -3,17 +3,17 @@ package org.o2i.jackrabbit.model;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RefMetadata {
+public class RefMetadataBean {
 	
 	private Long refMetadataId;
 	private String refMetadataName;
 	private Map<String, String> listMetadata;
 	
-	public RefMetadata() {
+	public RefMetadataBean() {
 		this.listMetadata = new HashMap<String, String>();
 	}
 
-	public RefMetadata(String refMetadataName) {
+	public RefMetadataBean(String refMetadataName) {
 		this.listMetadata = new HashMap<String, String>();
 		this.refMetadataName = refMetadataName;
 	}

@@ -15,12 +15,6 @@ public enum CustomType {
 	NODE_STATUS_LIST("StatusList"),
 	NODE_METADATA_LIST("MetadataList"),
 	
-	/**
-	 * Mixin 
-	 */
-	MIX_TYPE_FOLDER("MixTypeFolder"),
-	MIX_TYPE_FILE("MixTypeFile"),
-	
 	
 	/**
 	 * PROPERTY
