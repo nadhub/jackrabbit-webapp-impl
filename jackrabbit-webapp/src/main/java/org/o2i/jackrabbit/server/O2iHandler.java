@@ -49,29 +49,22 @@ public class O2iHandler extends DefaultHandler {
 		}
 		Node contentNode = null;
 		if (isCollection) {
-			contentNode = parentNode;
-			//
-			System.out.println(contentNode.getPrimaryNodeType().getName());
+			contentNode = parentNode;			
+			/*
+			 * Transfert du contenu node (JCR) (Folder) dans le javabean NodeBean 
+			 */
 			NodeBean nodeBean = NodeUtil.nodeJcrToNodeBean(contentNode);
-			NodeDAO ndao = new NodeDAO();
-			//System.out.println("Instance Dao Ok ...");
-			System.out.println("------------------------");
-			System.out.println(nodeBean.getNodeId());
-			System.out.println(nodeBean.getType());
-			System.out.println(nodeBean.getLabel());
-			System.out.println(nodeBean.getLastModified());
-			System.out.println(nodeBean.getUser().getFirstName());
-			System.out.println(nodeBean.getStatus().getStatusName());
-			System.out.println("------------------------");
 			
-			
-			try {
-					ndao.addNode(nodeBean);
-					System.out.println("persistance ok ....");
+			/*
+			 * Persistance des données node dans la BD
+			 */
+			NodeDAO ndao = new NodeDAO();			
+			try {					
+					ndao.addNode(nodeBean);				
 			} catch (SQLException e) {
-				e.printStackTrace();
+				LOG.info(e.getMessage());
 			}
-			///
+			
 		} else {
 			if (parentNode.hasNode(JcrConstants.JCR_CONTENT)) {
 				contentNode = parentNode.getNode(JcrConstants.JCR_CONTENT);
@@ -106,9 +99,6 @@ public class O2iHandler extends DefaultHandler {
 				}
 			}
 		}
-		/**
-		 * Surcharge, transferer les données du node dans le NodeBean
-		 */
 		
 		
 		return contentNode;
