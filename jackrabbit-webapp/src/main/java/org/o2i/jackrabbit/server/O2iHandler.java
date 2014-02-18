@@ -1,5 +1,7 @@
 package org.o2i.jackrabbit.server;
 
+import java.sql.SQLException;
+
 import javax.jcr.Node;
 import javax.jcr.NodeIterator;
 import javax.jcr.RepositoryException;
@@ -7,6 +9,9 @@ import javax.jcr.RepositoryException;
 import org.apache.jackrabbit.JcrConstants;
 import org.apache.jackrabbit.server.io.DefaultHandler;
 import org.apache.jackrabbit.server.io.ImportContext;
+import org.o2i.jackrabbit.dao.NodeDAO;
+import org.o2i.jackrabbit.model.NodeBean;
+import org.o2i.jackrabbit.util.NodeUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,16 +37,12 @@ public class O2iHandler extends DefaultHandler {
 			 * Surcharge
 			 */
 			System.out.println(ntName);
-
 			if (ntName == getCollectionNodeType()) {
-
 				parentNode.setProperty(CustomType.PROP_FOLDER_TYPE.toString(), 0);
 
 			} else if (ntName == getNodeType()) {
-
 				parentNode.setProperty(CustomType.PROP_FILE_TYPE.toString(), 1);
-				// LOG.info("Ajout de la properiété  :" +
-				// parentNode.getProperty(CustomType.PROP_FILE_TYPE.toString()));
+				
 			}
 
 			// ////
@@ -49,6 +50,28 @@ public class O2iHandler extends DefaultHandler {
 		Node contentNode = null;
 		if (isCollection) {
 			contentNode = parentNode;
+			//
+			System.out.println(contentNode.getPrimaryNodeType().getName());
+			NodeBean nodeBean = NodeUtil.nodeJcrToNodeBean(contentNode);
+			NodeDAO ndao = new NodeDAO();
+			//System.out.println("Instance Dao Ok ...");
+			System.out.println("------------------------");
+			System.out.println(nodeBean.getNodeId());
+			System.out.println(nodeBean.getType());
+			System.out.println(nodeBean.getLabel());
+			System.out.println(nodeBean.getLastModified());
+			System.out.println(nodeBean.getUser().getFirstName());
+			System.out.println(nodeBean.getStatus().getStatusName());
+			System.out.println("------------------------");
+			
+			
+			try {
+					ndao.addNode(nodeBean);
+					System.out.println("persistance ok ....");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			///
 		} else {
 			if (parentNode.hasNode(JcrConstants.JCR_CONTENT)) {
 				contentNode = parentNode.getNode(JcrConstants.JCR_CONTENT);
@@ -83,6 +106,11 @@ public class O2iHandler extends DefaultHandler {
 				}
 			}
 		}
+		/**
+		 * Surcharge, transferer les données du node dans le NodeBean
+		 */
+		
+		
 		return contentNode;
 
 	}

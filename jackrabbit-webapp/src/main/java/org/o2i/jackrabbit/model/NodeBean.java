@@ -3,7 +3,7 @@ package org.o2i.jackrabbit.model;
 
 public class NodeBean {
 	
-	private Long nodeId;
+	private String nodeId;
 	private String label;
 	private UserBean user;
 	private String lastModified;
@@ -25,11 +25,11 @@ public class NodeBean {
 		this.type = type;
 	}
 
-	public Long getNodeId() {
+	public String getNodeId() {
 		return nodeId;
 	}
 
-	public void setNodeId(Long nodeId) {
+	public void setNodeId(String nodeId) {
 		this.nodeId = nodeId;
 	}
 

@@ -11,6 +11,12 @@ public class UserBean {
 	
 	public UserBean() {
 	}
+	
+	
+
+	public UserBean(String firstName) {
+		this.firstName = firstName;
+	}
 
 	public UserBean(String firstName, String name, String login, String password,
 			boolean isValid) {
@@ -20,8 +26,7 @@ public class UserBean {
 		this.password = password;
 		this.isValid = isValid;
 	}
-	
-	
+		
 
 	public UserBean(String firstName, String login, String password) {
 		super();

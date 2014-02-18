@@ -13,18 +13,15 @@ public class DataBase {
 
 	private static Connection cn;
 
-	static {
-
-		try {
-
-			Class.forName("com.mysql.jdbc.Driver");
-			cn = DriverManager.getConnection(
-					"jdbc:mysql://localhost:3306/dbTest", "root", "");
-
-		} catch (SQLException | ClassNotFoundException e) {
-			LOG.info(e.getMessage());
-		}
-	}
+		static {
+				try {
+					Class.forName("com.mysql.jdbc.Driver");
+					cn = DriverManager.getConnection(
+							"jdbc:mysql://localhost:3306/xplan", "root", "");
+					} catch (SQLException | ClassNotFoundException e) {
+					LOG.info(e.getMessage());
+					}
+				}
 
 	public static Connection getConnection() {
 
