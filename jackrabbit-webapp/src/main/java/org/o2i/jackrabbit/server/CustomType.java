@@ -5,7 +5,7 @@ public enum CustomType {
 	/**
 	 * Nodes
 	 */
-
+	
 	NODE_FOLDER("Folder"),
 	NODE_FILE("File"),
 	NODE_USER("User"),
@@ -14,6 +14,13 @@ public enum CustomType {
 	NODE_USER_LIST("UserList"),
 	NODE_STATUS_LIST("StatusList"),
 	NODE_METADATA_LIST("MetadataList"),
+	
+	/**
+	 * Mixin 
+	 */
+	MIX_TYPE_FOLDER("MixTypeFolder"),
+	MIX_TYPE_FILE("MixTypeFile"),
+	
 	
 	/**
 	 * PROPERTY
@@ -39,7 +46,7 @@ public enum CustomType {
 	PROP_STATUS_LIST_NAME("statusName");
 	
 	/** namesapce */
-	private final String NS = "o2:";
+	private final String NS = "o2i:";
 
 	/**
 	 *  attribut typeName 

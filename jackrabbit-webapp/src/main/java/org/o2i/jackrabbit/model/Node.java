@@ -9,17 +9,17 @@ public class Node {
 	private Long nodeId;
 	private String label;
 	private User user;
-	private Date lastModified;
+	private String lastModified;
 	private Status status;
-	private Type type;
+	private Long type;
 	private List<RefMetadata> refMetadata;
 	
 	public Node() {
 		this.refMetadata = new ArrayList<RefMetadata>();
 	}
 
-	public Node(String label, User user, Date lastModified,
-			Status status, Type type) {
+	public Node(String label, User user, String lastModified,
+			Status status, Long type) {
 		this.refMetadata = new ArrayList<RefMetadata>();
 		this.label = label;
 		this.user = user;
@@ -52,11 +52,11 @@ public class Node {
 		this.user = user;
 	}
 
-	public Date getLastModified() {
+	public String getLastModified() {
 		return lastModified;
 	}
 
-	public void setLastModified(Date lastModified) {
+	public void setLastModified(String lastModified) {
 		this.lastModified = lastModified;
 	}
 
@@ -68,11 +68,11 @@ public class Node {
 		this.status = status;
 	}
 
-	public Type getType() {
+	public Long getType() {
 		return type;
 	}
 
-	public void setType(Type type) {
+	public void setType(Long type) {
 		this.type = type;
 	}
 

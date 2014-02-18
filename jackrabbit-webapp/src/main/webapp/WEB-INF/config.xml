@@ -81,7 +81,8 @@
             <class name="org.apache.jackrabbit.server.io.DirListingExportHandler" />
         </iohandler>
         <iohandler>
-            <class name="org.apache.jackrabbit.server.io.DefaultHandler" />
+            <!-- <class name="org.apache.jackrabbit.server.io.DefaultHandler" /> -->
+             <class name="org.o2i.jackrabbit.server.O2iHandler"></class>
         </iohandler>
     </iomanager>
     <!--
@@ -117,7 +118,8 @@
             <class name="org.apache.jackrabbit.server.io.XmlHandler" />
         </propertyhandler>
         <propertyhandler>
-            <class name="org.apache.jackrabbit.server.io.DefaultHandler" />
+            <!-- <class name="org.apache.jackrabbit.server.io.DefaultHandler" /> -->
+            <class name="org.o2i.jackrabbit.server.O2iHandler"></class>
         </propertyhandler>
     </propertymanager>
     <!--
