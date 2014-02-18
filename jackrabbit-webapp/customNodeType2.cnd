@@ -1,0 +1,29 @@
+<nt = 'http://www.jcp.org/jcr/nt/1.0'>
+<jcr = 'http://www.jcp.org/jcr/1.0'>
+<mix = 'http://www.jcp.org/jcr/mix/1.0'>
+<o2i = 'http://www.o2i.biz/o2i/1.0'>
+
+[o2i:User] > mix:referenceable, nt:base 
+- o2i:firstName (STRING) COPY
+- o2i:lastName (STRING) COPY
+- o2i:login (STRING) COPY
+- o2i:isValid (LONG) = '1' COPY
+
+[o2i:Status] > mix:referenceable, nt:base 
+- o2i:statusName (STRING) COPY
+- o2i:statusDescription (STRING) COPY
+
+[o2i:UserList] > nt:base orderable
++ * (o2i:User) = o2i:User COPY sns
+
+[o2i:StatusList] > nt:base orderable
++ * (o2i:Status) = o2i:Status COPY sns
+
+[o2i:Folder] > mix:lastModified, nt:base, nt:folder 
+- o2i:user (REFERENCE) COPY
+- o2i:typeFolder (LONG) = '0' COPY
+
+[o2i:File] > nt:base, nt:file 
+- o2i:status (REFERENCE) COPY
+- o2i:typeFile (LONG) = '1' COPY
+
