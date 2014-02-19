@@ -32,7 +32,7 @@ public class NodeDAO {
 		psmt.setString(6, nodeBean.getStatus().getStatusName());
 	
 		rs = psmt.executeUpdate();
-		if (rs > 1) {
+		if (rs > 0) {
 			LOG.info("Persistance des données du node s'est bien déroulée OK !!");
 		}else {
 			 LOG.info("Une erreur est survenu lors de la persistance des données du node !!!!");

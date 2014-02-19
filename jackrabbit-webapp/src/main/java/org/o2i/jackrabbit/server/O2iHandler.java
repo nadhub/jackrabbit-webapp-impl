@@ -53,7 +53,7 @@ public class O2iHandler extends DefaultHandler {
 			/*
 			 * Transfert du contenu node (JCR) (Folder) dans le javabean NodeBean 
 			 */
-			NodeBean nodeBean = NodeUtil.nodeJcrToNodeBean(contentNode);
+			NodeBean nodeBean = NodeUtil.nodeFolderJcrToNodeBean(contentNode);
 			
 			/*
 			 * Persistance des données node dans la BD
@@ -88,6 +88,7 @@ public class O2iHandler extends DefaultHandler {
 				}
 			}
 			if (contentNode == null) {
+
 				// JCR-2070: Use the predefined content node type only
 				// when the underlying repository allows it to be used
 				if (parentNode.getPrimaryNodeType().canAddChildNode(
@@ -96,7 +97,8 @@ public class O2iHandler extends DefaultHandler {
 							getContentNodeType());
 				} else {
 					contentNode = parentNode.addNode(JcrConstants.JCR_CONTENT);
-				}
+				}				
+			
 			}
 		}
 		
